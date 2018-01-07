@@ -1,0 +1,975 @@
+== igual,!= diferente,> Maior,< Menor,>= maior ou igual,< menor ou igual,instanceoff compara tipos
+
+
+if ((12<13) && (25>23)){
+  System.out.println("O 12 e menor que treze e 25 maior que 23");
+====================================================================
+         int idade;
+	  idade = 11;
+	  
+	  String sexo;
+	  sexo = "Feminino";
+	  
+	  if ((idade > 18) && (sexo == "Feminino")) {
+		 System.out.println("Voce e menina e menor de idade Rayna"); 
+	    
+	  }else{
+		  System.out.println("Voce e menina e maior de idade Rayna");
+         }
+	}
+============================================================
+int idade;
+	  idade = 21;
+	  
+	  String sexo;
+	  sexo = "Feminino";
+	  
+	  if ((idade > 18) || (sexo == "Feminino")) {
+		 System.out.println("Voce e menina e menor de idade Rayna"); 
+============================================================================
+int contador;
+	  contador = 30;
+	  
+	  contador = contador + 11;
+	  
+	  System.out.println("O conteudo de contador e: +" + contador);
+ ===========================================================================
+Scanner scan =new Scanner(System.in);
+
+System.out.println("Entre com sua idade");
+	  
+	  int idade = scan.nextInt();
+	   
+	  if(idade >=18){ 
+	     System.out.println("E maior de idade.");
+	  }else{
+         System.out.println("Nao e maior de idade."); 	  
+	  
+	}
+    }
+} 
+===================================================================
+             Scanner moi = new Scanner(System.in);
+System.out.println("entre com o preco do item"); 
+	   double valor = moi.nextDouble();
+	   
+	   if (valor <= 10){
+		   System.out.println("Esta barato,pode comprar");
+	   }else if (valor >10 && valor < 15){
+           System.out.println("Voce pode pedir um desconto");
+	   
+}else if ( valor >= 15 && valor <17){
+		   System.out.println("pode pesquisar mais");
+	   }else{ //valor >=17
+           System.out.println("Muito caro");	   
+		   
+	    }
+	}
+}Quando você usa else if você executa o if apenas se o if anterior não for valido. Na pratica, imagine o codigo a seguir...
+
+int nota = 9;
+	  
+	  if(nota <7) {
+		  System.out.println("Voce aprovado");
+	  }else{
+		   System.out.println("Voce foi reprovado");
+	 if( nota >=6){
+			 System.out.println("Podera recuperar");
+
+int idade = 61;
+	 
+	  if (idade <=11){
+		  System.out.println("Voce e crianca");
+	  }else if(idade > 11 && idade <= 18){
+           System.out.println("Voce e adolescente");
+	   }else if(idade > 18 && idade <= 60){
+	 		System.out.println("Voce e adulto");
+	 
+	  }else{
+		  System.out.println("Voce e da terceira idade");
+	    
+		 }	 
+========================================================================
+Se (x = 2), faça:
+    Imprime "Número 2"
+senão, faça:
+    se (x = 3), faça:
+        Imprime "Número 3"
+    senão, faça:
+        Imprime "Número Inválido"
+    fim
+fim   (if e se)(else if senao se)   
+
+== igual
+!= diferente
+>Maior
+<menor
+>= maior ou igual
+<= menor ou igual
+instanceof compara tipos
+======================================================
+Integer  x = 10;
+	
+	System.out.println(x instanceof Integer);// instance (e um)
+        System.out.println("oi" instanceof string);
+
+int r = 11;  //boolean
+	 
+	   System.out.println( r == 11);
+
+======================================================
+int x = 10;
+	
+	System.out.println(( x >= 1) || (x <= 12));	
+        System.out.println(( x >= 1) && (x <= 12));   
+        
+int x = 10;
+	
+	System.out.println(!(x >=1)); 
+&& and(e)
+|| 0r (ou)
+!  not (nao)
+=========================================================
+public static void main(String[] args) {  // switch
+       
+        Scanner tec = new Scanner (System.in);
+        System.out.println("Quantas pernas ?  ");
+        int perna = tec.nextInt();
+        String tipo;
+        System.out.println("Isto e um(a)");
+       
+ switch (perna){
+            case 1:
+                tipo = "Saci";
+                break;
+            case 2:
+                tipo = "Bipede";
+                break;
+            case 3:
+                tipo = "tripede";
+                break;
+            case 4:
+                tipo = "Quadrupede";
+                 break;
+            case 6:
+                 tipo  = "Aranha";
+                   break;
+            default:
+                tipo = "Et";
+        }
+        System.out.println(tipo);
+====================================================================
+Numeros Randomicos.
+
+double ale = Math.random();//gerador de numeros
+      int n = (int)(1 + ale * (1000-1));
+        System.out.println(n); 
+--------------------xxx--------------------  
+double ale = Math.random();
+        System.out.println(ale);
+====================================================================
+comand continue;
+
+public class Contador01 {
+    public static void main(String[] args) {
+        
+       int cc = 0;
+       while(cc<10){
+           cc++;
+         if (cc !=5 && cc != 7 && cc!=9){
+      
+             continue;
+           }
+       System.out.println("Cambalhotas " + cc);
+    }
+  }
+}
+===================================================================
+double tempDia001 = 31.3;
+		double tempDia002 = 32;
+		double tempDia003 = 33.7;
+		double tempDia004 = 34;
+		double tempDia005 = 33.1;
+		
+		double[] temperaturas = new double[365];
+		temperaturas[0] = 31.3;
+		temperaturas[1] = 32;
+		temperaturas[2] = 33.7;
+		temperaturas[3] = 34;
+		temperaturas[4] = 33.1;
+		
+		System.out.println("O valor da temperatura do dia 3 e: " + temperaturas[2]);
+		
+		System.out.println("O tamanho do array: " + temperaturas.length);
+		
+		System.out.println("Valores do array: " );
+		
+		for(int i=0; i<temperaturas.length; i++){
+			System.out.println("O valor da temperatura do dia " + (i+1) + " e: " + temperaturas[i]);
+			
+		}
+	}
+}	
+==================================================================
+                     Estruturas de repeticao.
+ int n, s=0;
+        String resp;
+        Scanner teclado = new Scanner(System.in);
+        do{
+            System.out.println("Digite um numero: ");
+          n = teclado.nextInt();
+          s += n;//s = s+n
+          
+          System.out.println("Quer continuar? [s/n]");
+          resp = teclado.next();
+        
+            } while(resp.equals("s"));
+             System.out.println("A soma de todos os valores e " + sn);   
+        }
+    }
+==============================================================
+===========================================================================
+ for(int cc=100; cc >=5; cc -=25 ){           //Repeticao
+		     System.out.println(cc); 
+=========================================================================
+ for(int i=0; i<=500; i++){   //pares
+    if(i % 2==0 ){
+     System.out.println(i):
+  }
+}
+================================================
+for(int i=0; i<=200; i++){ // imapres,
+          if(i% 3==0){
+              System.out.println(i);
+================================================
+                    Estruturas de Repeticao.
+
+ArrayList<String>  produtos = new ArrayList<String>();
+	     Scanner moi   = new Scanner(System.in);
+	            System.out.println("Liste seus produtos: para sair digite Fim");
+	        
+	        String produto;
+	       
+	         while(!"FIM".equals(produto = moi.nextLine())) {
+	             produtos.add (produto);
+	         }
+	        
+	        System.out.println(produtos.toString());
+=======================================================
+ int n, s = 0; 
+       do { 
+        n= Integer.parseInt(JOptionPane.showInputDialog(null,
+                "<html>Infome um numero: </br><em>(valor 0 interrompe)</em></html>"));
+        s += n;
+       }while(n != 0);
+       JOptionPane.showMessageDialog(null, 
+               "<html>Resultado final<br>---------------" + "<br>Somatorio vale " + s);
+    }
+    
+}
+===========================================================
+                       Aula 02
+public class Aula02 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Caneta c1 = new Caneta();
+        
+        c1.cor = "Azul";
+        c1.ponta = 0.5f;
+        c1.tampada = false;
+        c1.status();
+        c1.tampar();
+        c1.rabiscar();
+    }
+    
+}
+              continuacao 
+public class Caneta {
+    
+    String modelo;
+    String cor;
+    float ponta;
+    int carga;
+    boolean tampada;
+    
+    void status(){
+        System.out.println("Modelo " + this.modelo);
+        System.out.println("Ponta " + this.ponta);
+        System.out.println("Uma caneta " + this.cor);
+        System.out.println("Carga " + this.carga);
+        System.out.println("Esta tampada ? " + this.tampada);
+    }
+    
+    void rabiscar(){
+     if(this.tampada == true){
+       System.out.println("Erro.nao posso rabiscar);
+       }else{
+          System.out.println("Posso rabiscar");
+        
+    }
+    void tampar(){
+       this.tampada = true;
+        
+    }
+    void destampar(){
+    this.tampada = false;
+        
+    }
+}
+===========================================================
+                       Retorno
+
+public class TesteFuncao01 {
+
+     static int soma (int a,int b){
+        int s = a + b;
+        return s;
+        }
+    
+    public static void main(String[] args) {
+        
+        System.out.println("Comecou o programa");
+        int sm = soma (5,2);
+        System.out.println("A soma vale "+ sm);
+    }
+    
+}
+=========================================================
+                         Aula 05 metodos Getter,Setter e construtor
+ public class Caneta {
+        private String modelo;
+        private String cor;
+        private float ponta;
+        private boolean tampada;
+        
+        public  Caneta(String m,String c, float p){ //Este e o metodo construtor
+            this.modelo = m;
+            this.cor = c;
+            this.ponta = p;
+            this.tampar();
+            
+        }
+        
+        public String getModelo(){
+            return this.modelo;
+        }
+        public void setModelo(String m){
+            this.modelo = m;
+        }
+        public float getPonta(){
+            return this.ponta;
+        }
+        public void setponta(float p){
+            this.ponta = p;
+            }
+         public void tampar(){
+             this.tampada = true;
+         }
+         public void destampar(){
+             this.tampada = false;
+         }
+        public void status(){
+            System.out.println("Sobre a caneta: ");
+            System.out.println("Modelo: " + this.getModelo());
+            System.out.println("Ponta: " + this.getPonta());
+            System.out.println("Cor: " + this.cor);
+            System.out.println("Tampada: " + this.tampada);
+        }
+                   =xxxxx= continuacao
+public class Aula05 {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Caneta c1 = new Caneta("Moi", "Branca", 0.7f);
+        Caneta c2 = new Caneta("Beca", "Vermelho", 0.07f);
+        
+        //c1.setModelo("Bic");// methodo acessor
+        //c1.modelo = "Bic";//acesso diretamente o atributo
+        
+       // c1.setponta(0.07f);
+       // c1.ponta = 0.07f; esta protegido
+        //c1.status();
+       // System.out.println("Tenho uma caneta: " + 
+        // c1.getModelo() + " de ponta " + c1.getPonta());
+            c1.status();
+            c2.status();
+    }
+    
+}
+==============================================================
+                       class obreiros 1 parte methodo sets
+public class Obreiros {
+    
+    private String modelo;
+    private String cargo;
+    private  float salario;
+    
+    public String getModelo(){
+        return this.modelo;
+    }  
+    public void setModelo(String m){
+        this.modelo = m;
+    }
+     public String getCargo(){
+         return this.cargo;
+     }
+     public void setCargo(String c){
+         this.cargo = c;
+     }
+     public float getSalario(){
+         return this.salario;
+     }
+     public void setSalario(float s){
+          this.salario = s;
+     } 
+     
+    public void status(){
+        System.out.println("Sobre os obreiros da igreja ");
+        System.out.println("Modelo: "+ this.modelo);
+        System.out.println("Cargo: "+ this.cargo);
+        System.out.println("Salario: "+ this.salario);
+    }
+    
+    
+}
+                          xxxxxx
+public class Aula07 {
+
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Obreiros m3 = new Obreiros();
+        
+        m3.setModelo("Pastor");
+        m3.setCargo("Porteiro");
+        m3.setSalario(1.200f);
+        
+        m3.status();
+==================================================
+                  classe obreiro 2 parte methodos gets
+public class Obreiros {
+    
+    public String modelo;
+    private String cargo;
+    private  float salario;
+    
+    public String getModelo(){
+        return this.modelo;
+    }  
+    public void setModelo(String m){
+        this.modelo = m;
+    }
+     public String getCargo(){
+         return this.cargo;
+     }
+     public void setCargo(String c){
+         this.cargo = c;
+     }
+     public float getSalario(){
+         return this.salario;
+     }
+     public void setSalario(float s){
+          this.salario = s;
+     } 
+     
+    public void status(){
+        System.out.println("Sobre os obreiros da igreja ");
+        System.out.println("Modelo: "+ this.getModelo());
+        System.out.println("Cargo: "+ this.getCargo());
+        System.out.println("Salario: "+ this.getSalario());
+    }
+    
+    
+}
+                        xxxxxx
+public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Obreiros m3 = new Obreiros();
+
+System.out.println("O responsavel pela congregacao e o: "+ m3.getModelo()
+                +" seu cargo e:"+ m3.getCargo()+ 
+" seu salario e de: "+m3.getSalario());
+===========================================================
+                     obreiro class parte 3 methodo construtor
+public class Obreiros {
+    
+    public String modelo;
+    private String cargo;
+    private  float salario;
+    
+    public  Obreiros(String m,String c,float s){//construtor
+       this.modelo = m;
+       this.cargo = c;
+       this.salario = s;
+    
+    }
+    
+    public String getModelo(){
+        return this.modelo;
+    }  
+    public void setModelo(String m){
+        this.modelo = m;
+    }
+     public String getCargo(){
+         return this.cargo;
+     }
+     public void setCargo(String c){
+         this.cargo = c;
+     }
+     public float getSalario(){
+         return this.salario;
+     }
+     public void setSalario(float s){
+          this.salario = s;
+     } 
+     
+    public void status(){
+        System.out.println("Sobre os obreiros da igreja ");
+        System.out.println("Modelo: "+ this.getModelo());
+        System.out.println("Cargo: "+ this.getCargo());
+        System.out.println("Salario: "+ this.getSalario());
+    }
+    
+    
+}
+                        xxxx methodo construtor
+public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Obreiros m3 = new Obreiros("Pastor","Dirigente",1.2f);
+        m3.status();
+        
+        Obreiros m4 = new Obreiros("membro","zelador",8.0f);
+        m4.status();   
+===========================================================
+                     aula 02 caneta
+package aula02;
+
+
+public class Caneta {
+    
+ String modelo;;
+  String cor;
+  float ponta;
+  int carga;
+  boolean tampada;
+    
+    public void status(){
+       System.out.println("Modelo " + this.modelo);
+       System.out.println("Ponta " + this.ponta);
+       System.out.println("Uma caneta " + this.cor);
+       System.out.println("Carga " + this.carga);
+       System.out.println("Esta tampada ? " + this.tampada);
+    }
+    
+    void rabiscar(){
+        if(this.tampada == true){
+            System.out.println("Erro nao posso rabiscar");
+        }else{
+            System.out.println("Posso rabiscar");
+        }
+        
+    }
+   protected void tampar(){
+        this.tampada = true;
+    }
+   protected void destampar(){
+        this.tampada = false;
+    }
+}
+                        xxx
+                        continuacao
+package aula02;
+
+
+public class Aula02 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Caneta c1 = new Caneta();
+        
+        c1.cor = "Azul";//referencia a atributo
+        c1.ponta = 0.5f;
+        c1.tampar();
+========================================
+String jesusEMelhorEscolha;
+		jesusEMelhorEscolha = "Sim";
+		
+		if (jesusEMelhorEscolha == "Sim"){
+			System.out.println("Aceite como Salvador");
+		}else{
+			 System.out.println("Nao o aceite");
+			
+		}
+	}
+====================================================
+nome class
+
+atributo ponta 
+         cor
+--------
+methodos: escrever()
+          rabiscar()
+========================================================
+                      modificador final.
+int poulacaoBrasileira = 203429773;
+			poulacaoBrasileira = 123;
+			
+			final double PI = 3.14159265358979323846;
+			
+			
+			System.out.println(PI);
+========================================================
+                        modificador final ll.    
+
+public final class SerHumano extends SerVivo{  //herda a class
+public class Test0102 extends SerHumano {//nao pode herdar a class
+
+public class SerVivo {
+    
+    final String habitat = "Planeta terra";
+    
+    public void dormir(){
+        System.out.println("Lord Jesus");
+    }
+public final class SerHumano extends SerVivo{
+    public SerHumano(){
+        habitat = "Lua";// nao pode modificar
+ =========================================================
+
+int ano = Integer.parseInt(txtAno.getText());
+        int idade = 2017 - ano;
+        lblIdade.setText(Integer.toString(idade));
+        String sit = ((idade>=16 && idade<18)||(idade>70))? "E opcional" : "Nao e opcional";
+        lblSituacao.setText(sit);   
+====================================================
+/*int n1 =3;
+       int n2 = 5;
+       float m = (n1 + n2) /2;
+        System.out.println("A media e: " + m);*/
+       
+       /*int numero = 230;
+       int valor = 400 + ++numero;//e pre-incremento and incremento and decremento
+       System.out.println(valor);
+         System.out.println(numero); */
+       
+       int x = 4;
+       x *=2; //x =(recebi) x + 2
+        System.out.println(x);
+============================================================
+                   Vetores
+final int Total_Alunos = 4;
+        final int Total_Bimestres=4;
+        final double Nota_Minima = 500.0;
+        
+        Scanner moi = new Scanner(System.in);
+        String[]nomeAlunos = new String[Total_Alunos];
+        double[][]notaAlunos = new double[Total_Alunos][Total_Bimestres]; 
+        double[]mediaAlunos = new double[Total_Alunos];
+        
+        //obter nomes dos alunos
+        for(int i=0; i<Total_Alunos; ++i){
+            System.out.println("Informe o nome do : "+ (i+1) + " Aluno");
+            nomeAlunos[i] = moi.nextLine();//ira amarzenar os nomes
+        }
+        System.out.println("");
+        
+        //obter notas dos alunos todos bimestres
+        for(int i=0; i<Total_Alunos; ++i){
+         for(int j=0; j<Total_Bimestres;++j) {
+             System.out.println("Informe a nota do Aluno: "+nomeAlunos[i]
+              +" Para o "+ (j+1)+ " bimestres"); 
+             notaAlunos[i][j] = moi.nextDouble();
+         }  
+        }
+        // calcular a media
+        for(int i =0; i<Total_Alunos; ++i){
+            for(int j=0; j<Total_Bimestres;++j){
+             mediaAlunos[i] += notaAlunos[i][j];   
+            }
+            mediaAlunos[i] /= Total_Bimestres;
+        }
+        //qual a situacao dos alunos
+        System.out.println("===========Result Final=============");
+        
+        for(int i=0; i<Total_Alunos;++i){
+          if(mediaAlunos[i] >= Nota_Minima){
+              System.out.println("Nome: "+ nomeAlunos[i]+ " Media: "
+                      +mediaAlunos[i]+ " Situacao: Aprovado");
+              continue;
+          //}else{
+          } 
+           System.out.println("Nome: "+ nomeAlunos[i]+ "Media: "
+                      +mediaAlunos[i]+ " Situacao: Reprovado");
+        }
+=================================================================
+                public class Vetor {
+	int []elementos;
+        final int Max = 5;
+        int cont;
+    
+    public Vetor(){
+    	elementos = new int[Max];
+    	cont =0;
+    }
+    public void adcionar(int elemento) throws Exception{
+    	if(cont < elementos.length){
+    	elementos[cont] = elemento;
+    	cont++;
+    	}else{
+    		throw new Exception("O vetor esta cheio");
+    	}
+                          -------
+public class Moi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Vetor moi = new Vetor();
+		
+		try {
+			moi.adcionar(23);
+			moi.adcionar(28);
+			moi.adcionar(12);
+			moi.adcionar(17);
+			moi.adcionar(11);
+			moi.adcionar(54);
+		} catch (Exception e) {
+			
+JOptionPane.showMessageDialog(null,e.getMessage());
+==================================================
+		
+// TODO code application logic here
+       /*int n1 =3;
+       int n2 = 5;
+       float m = (n1 + n2) /2;
+        System.out.println("A media e: " + m);*/
+       
+       /*int numero = 12;
+       int valor = 12 + ++numero;//e pre-incremento and incremento and decremento
+      System.out.println(valor);
+         System.out.println(numero);*/ 
+       
+       /*int x = 4;
+       x *=2; //x =(recebi) x + 2
+        System.out.println(x);*/
+         
+       //operadores comparacao
+       
+       //boolean resultado = 10!=10;
+       // System.out.println(resultado);
+       
+      /* if(true){
+           System.out.println("Casado"); 
+       }else{
+           System.out.println("false");
+       }*/
+    
+       
+   }
+ }
+====================================================
+                     Calcular Idade
+                     
+ private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+     int ano =Integer.parseInt(txtAno.getText());
+     int idade = 2017 -ano;
+     lblIdade.setText(Integer.toString(idade));
+     //String sit =(idade >=18)?"Maior":"Menor";
+     String sit =((idade >=16 && idade <=18 ||idade >70 )?"Opcional":"Nao opcional";
+     lblSituacao.setText(sit); 
+    } 
+=========================================================
+                    loops
+String texto = "";
+        for(int i=20; i>0;i--){
+             texto += i + ",";   
+        }
+                loops numeros pares
+String texto = "";
+        for(int i=0; i<=20;i++){
+            if(i % 2 == 0){
+             texto += i + ",";    
+            }
+         
+         System.out.println(texto);    
+                 
+                   loops1
+int tamanho = 5;
+        for(int i=0; i<tamanho;i++){
+         System.out.println("*");   
+       }     
+                   loops2
+int tamanho = 5;
+        for(int x=0; x<tamanho;x++){
+            for(int i=0; i<tamanho; i++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+==================================================================
+                       Estrura for 
+     int[] pares = {2,4,6,8};
+        for(int i=0;i<pares.length;i++){
+            int par = pares[i];
+            System.out.println(par);
+        } 
+                 foreach,melhorada
+
+int[] pares = {2,4,6,8};//for melhorado n tem acesso a variavel i
+        for(int par:pares){//e so percorre p frente
+            System.out.println(par);
+
+ArrayList<Integer> list = new ArrayList<Integer>();
+        for(int i=0; i<20; i++){
+            list.add(i);
+        }
+        for (Integer numero:list){
+            System.out.println(numero);
+        }
+=================================================================
+while executa 0 a n vezes
+do executa 1 a n vezes
+
+ArrayList<String> produtos = new
+         ArrayList<String>();
+         Scanner moi = new Scanner (System.in);
+         System.out.println("Liste seus produtos:"
+                 + "Para sair digite FIM");
+         
+         String produto;
+         
+         while(!"FIM".equals(produto = moi.nextLine())){
+             produtos.add(produto);
+        }
+            System.out.println(produtos.toString());
+================================================================
+ double base,altura,areaRetangulo;
+			
+System.out.println("Informe o valor da base: ");
+base = moi.nextDouble();
+			
+System.out.println("Informe o valor da altura: ");
+altura = moi.nextDouble();
+			
+areaRetangulo = base * altura;
+			
+System.out.println(" A area de um retangulo de base = " + base);
+System.out.println(" e altura " + altura);
+System.out.println(" e " + areaRetangulo);
+================================================================
+                    casting
+        int x = 10;
+	int y = 6;int z = 3;
+        double a = 3;double b = 1.0;
+        double c = (double)(x/y);//(double)este e o casting
+	//int h = (int)c;
+        //int m = (int)a;
+        
+	System.out.println("x = " + x);
+	System.out.println("y = " + y);
+	System.out.println("z = " + z);
+			
+	System.out.println("a = " + a);
+	System.out.println("b = " + b) ;
+	System.out.println("c = " + c);
+======================================================================
+                          Jogo da velha
+
+
+import java.util.Scanner;
+public class JogoVelha {
+	public static void main(String[]args) {
+	
+	 Scanner scan = new Scanner(System.in);
+	 
+	 char[][] jogoVelha = new char [3][3];
+	 
+	 System.out.println("Jogador 1 = 0");
+	 System.out.println("Jogador 2 = x");
+	 
+	 boolean ganhou = false;
+	 int jogada = 1;
+	 char sinal;
+	 int linha = 0,coluna = 0;
+	
+    	while (!ganhou){
+	
+	   if(jogada % 2 == 1){ //jogador 1
+	   
+	   System.out.println("Vez do jogador 1.Escolha linha e coluna(1-3).");
+	    sinal = 'x';
+	  } else {
+		   		 // continua a logica 
+        System.out.println("Vez do jogador 2.Escolha linha e coluna (1-3).");
+	       sinal = 'o';
+	   }   
+	 boolean linhaValida = false;
+     while (!linhaValida){		  
+	   System.out.println("Entre com a linha (1,2 ou 3)");
+	    linha = scan.nextInt();
+	    if (linha >=1 && linha<=3){
+			linhaValida = true;
+	    }else {
+			System.out.println("Entrada invalida,tente novamente");
+	   }
+	 }
+	 boolean colunaValida = false;
+	 while(!colunaValida){
+	 System.out.println("Entre com a coluna (1,2 ou 3)");
+	 coluna = scan.nextInt();
+	 if (coluna >=1 && coluna<=3){
+	     colunaValida = true;
+	 }else{
+		 System.out.println("Entrada invalida,tente novamente");
+	  
+	  }
+   } 
+	linha --;
+	coluna --;
+	if (jogoVelha[linha][coluna] == 'x' || jogoVelha[linha][coluna] == 'o'){
+	     System.out.println("Posicao ja usada,tente novamente");
+	} else { //jogada valida
+       jogoVelha[linha][coluna] = sinal;		
+	   jogada++;
+	 }
+	 //imprimir tabuleiro
+	 for (int i=0; i<jogoVelha.length; i++){
+       for (int j=0; j<jogoVelha[i].length; j++){
+         System.out.print(jogoVelha[i][j] + " | ");
+	      }
+	     System.out.println();
+		}
+	      //verifica se tem gannhador
+	  if ((jogoVelha[0][0] == 'x' && jogoVelha[0][1] == 'X' && jogoVelha[0][2] == 'X') ||   //linha 1
+	    (jogoVelha[1][0] == 'x' && jogoVelha[1][1] == 'X' && jogoVelha[1][2] == 'X') ||     //linha 2
+        (jogoVelha[2][0] == 'x' && jogoVelha[2][1] == 'X' && jogoVelha[2][2] == 'X') ||     //linha 3
+		(jogoVelha[0][0] == 'x' && jogoVelha[1][0] == 'X' && jogoVelha[2][0] == 'X') ||     //coluna 1
+		(jogoVelha[0][1] == 'x' && jogoVelha[1][1] == 'X' && jogoVelha[2][1] == 'X') ||     //coluna 2
+	    (jogoVelha[0][2] == 'x' && jogoVelha[1][2] == 'X' && jogoVelha[2][2] == 'X') ||     //coluna 3
+		(jogoVelha[0][2] == 'x' && jogoVelha[1][1] == 'X' && jogoVelha[2][0] == 'X')){     //diagonal
+	  ganhou = true;
+      System.out.println("Parabens,jogador 1 ganhou!"); 	  
+		
+	 }else if   ((jogoVelha[0][0] == 'o' && jogoVelha[0][1] == 'o' && jogoVelha[0][2] == 'o') ||   //linha 1
+	    (jogoVelha[1][0] == 'O' && jogoVelha[1][1] == 'o' && jogoVelha[1][2] == 'o') ||     //linha 2
+        (jogoVelha[2][0] == 'o' && jogoVelha[2][1] == 'o' && jogoVelha[2][2] == 'o') ||     //linha 3
+		(jogoVelha[0][0] == 'o' && jogoVelha[1][0] == 'o' && jogoVelha[2][0] == 'o') ||     //coluna 1
+		(jogoVelha[0][1] == 'o' && jogoVelha[1][1] == 'o' && jogoVelha[2][1] == 'o') ||     //coluna 2
+	    (jogoVelha[0][2] == 'o' && jogoVelha[1][2] == 'o' && jogoVelha[2][2] == 'o') ||     //coluna 3
+		(jogoVelha[0][2] == 'o' && jogoVelha[1][1] == 'o' && jogoVelha[2][2] == 'o')){     //diagonal
+	   ganhou = true;
+	   System.out.println("Parabens,jogador 2 ganhou!");
+		
+		}else if  (jogada > 9) {
+	     ganhou = true;
+		 System.out.println("Ninguem ganhou essa partida");
+		
+		  } 
+		}
+	}
+}  
